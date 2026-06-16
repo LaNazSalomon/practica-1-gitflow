@@ -1,11 +1,11 @@
 # Inicio del proyecto
 
 ## Lider
-*Said*
+*Salomon Larios Nazar*
 
 ## Programadores
-*Mauricio Martinez Trejo*
-*Salomon Larios Nazar*
+*Mauricio Martinez Trejo*\n
+*Said Castillo Aguil*\n
 
 ## Disenador
 *Jose Samuel Quezada Simon*

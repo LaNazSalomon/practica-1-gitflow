@@ -7,6 +7,86 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <body>
+  <header class="hero" id="inicio">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">Equipo 8</a>
+
+      <div class="nav-actions">
+        <a href="#equipo">Equipo</a>
+        <a href="#flujo">GitFlow</a>
+        <button id="themeButton" class="theme-button" type="button" aria-label="Cambiar tema">
+          🌙
+        </button>
+      </div>
+    </nav>
+
+    <div class="hero-content container">
+      <span class="tag">Práctica colaborativa</span>
+      <h1>Portal del Equipo 8</h1>
+      <p>
+        Demostración práctica de GitFlow, ramas, Pull Requests y trabajo en equipo.
+      </p>
+      <a class="primary-button" href="#equipo">Conocer al equipo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" id="equipo">
+      <div class="section-heading">
+        <span class="eyebrow">Nuestro equipo</span>
+        <h2>Equipo 8</h2>
+        <p>
+          Cada integrante trabaja en una rama distinta y después integra sus cambios
+          mediante Pull Requests hacia la rama <strong>develop</strong>.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <article class="member-card reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <h3>Mauricio Martinez Trejo</h3>
+          <p class="role">Programador HTML / Integrador</p>
+          <p>
+            Construye la estructura semántica de la página, organiza las secciones
+            y revisa la integración final del proyecto.
+          </p>
+          <span class="branch">feature/html-estructura</span>
+        </article>
+
+        <article class="member-card reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <h3>Said Castillo Aguilar</h3>
+          <p class="role">Programador JavaScript</p>
+          <p>
+            Agrega las interacciones sencillas: cambio de tema, animaciones al
+            desplazarse y actualización automática del año.
+          </p>
+          <span class="branch">feature/interacciones-js</span>
+        </article>
+
+        <article class="member-card reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <h3>Jose Samuel Quezada Simon</h3>
+          <p class="role">Diseñador UI / CSS</p>
+          <p>
+            Define colores, tipografías, espaciados, tarjetas, diseño adaptable y
+            apariencia visual general de la landing page.
+          </p>
+          <span class="branch">feature/diseno-css</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© <span id="currentYear"></span> · Clase de Git y GitFlow.</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </body>
 </html>

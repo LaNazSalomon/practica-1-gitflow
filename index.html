@@ -1,192 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo 8</title>
-  </head>
-  <body>
+</head>
+<body>
     <body>
-      <header class="hero" id="inicio">
-        <nav class="navbar container" aria-label="Navegación principal">
-          <a class="brand" href="#inicio">Equipo 8</a>
+  <header class="hero" id="inicio">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">Equipo 8</a>
 
-          <div class="nav-actions">
-            <a href="#equipo">Equipo</a>
-            <a href="#flujo">GitFlow</a>
-            <button
-              id="themeButton"
-              class="theme-button"
-              type="button"
-              aria-label="Cambiar tema"
-            >
-              🌙
-            </button>
-          </div>
-        </nav>
+      <div class="nav-actions">
+        <a href="#equipo">Equipo</a>
+        <a href="#flujo">GitFlow</a>
+        <button id="themeButton" class="theme-button" type="button" aria-label="Cambiar tema">
+          🌙
+        </button>
+      </div>
+    </nav>
 
-        <div class="hero-content container">
-          <span class="tag">Práctica colaborativa</span>
-          <h1>Portal del Equipo 8</h1>
+    <div class="hero-content container">
+      <span class="tag">Práctica colaborativa</span>
+      <h1>Portal del Equipo 8</h1>
+      <p>
+        Demostración práctica de GitFlow, ramas, Pull Requests y trabajo en equipo.
+      </p>
+      <a class="primary-button" href="#equipo">Conocer al equipo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" id="equipo">
+      <div class="section-heading">
+        <span class="eyebrow">Nuestro equipo</span>
+        <h2>Equipo 8</h2>
+        <p>
+          Cada integrante trabaja en una rama distinta y después integra sus cambios
+          mediante Pull Requests hacia la rama <strong>develop</strong>.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <article class="member-card reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <h3>Mauricio Martinez Trejo</h3>
+          <p class="role">Programador HTML / Integrador</p>
           <p>
-            Demostración práctica de GitFlow, ramas, Pull Requests y trabajo en
-            equipo.
+            Construye la estructura semántica de la página, organiza las secciones
+            y revisa la integración final del proyecto.
           </p>
-          <a class="primary-button" href="#equipo">Conocer al equipo</a>
-        </div>
-      </header>
+          <span class="branch">feature/html-estructura</span>
+        </article>
 
-      <main>
-        <section
-          id="portafolio"
-          class="section container"
-          aria-labelledby="titulo-portafolio"
-        >
-          <div class="section-heading">
-            <span class="eyebrow">Proyectos</span>
-            <h2 id="titulo-portafolio">Nuestro Portafolio</h2>
-            <p>
-              Estos son algunos proyectos representativos del Equipo 8,
-              desarrollados como parte de la práctica colaborativa usando
-              GitFlow, ramas y Pull Requests.
-            </p>
-          </div>
-
-          <div class="portafolio-grid">
-            <article class="proyecto-card reveal">
-              <figure>
-                <img
-                  src="img/proyecto1.png"
-                  alt="Captura del proyecto de landing page del Equipo 8"
-                />
-                <figcaption>Landing Page Equipo 8</figcaption>
-              </figure>
-
-              <h3>Proyecto 1</h3>
-              <p>
-                Sitio web colaborativo creado con HTML semántico, CSS responsivo
-                y JavaScript básico.
-              </p>
-              <a href="#" class="btn-ver">Ver proyecto</a>
-            </article>
-
-            <article class="proyecto-card reveal">
-              <figure>
-                <img
-                  src="img/proyecto2.png"
-                  alt="Captura del proyecto de formulario de contacto"
-                />
-                <figcaption>Formulario de Contacto</figcaption>
-              </figure>
-
-              <h3>Proyecto 2</h3>
-              <p>
-                Formulario con validación de campos, mensajes dinámicos y
-                almacenamiento local.
-              </p>
-              <a href="#" class="btn-ver">Ver proyecto</a>
-            </article>
-
-            <article class="proyecto-card reveal">
-              <figure>
-                <img
-                  src="img/proyecto3.png"
-                  alt="Captura del proyecto de práctica GitFlow"
-                />
-                <figcaption>Práctica GitFlow</figcaption>
-              </figure>
-
-              <h3>Proyecto 3</h3>
-              <p>
-                Ejercicio de control de versiones usando ramas, commits, Pull
-                Requests y resolución de conflictos.
-              </p>
-              <a href="#" class="btn-ver">Ver proyecto</a>
-            </article>
-          </div>
-        </section>
-
-        <section
-          id="contacto"
-          class="section contacto-section"
-          aria-labelledby="titulo-contacto"
-        >
-          <div class="container">
-            <div class="section-heading">
-              <span class="eyebrow">Contacto</span>
-              <h2 id="titulo-contacto">Contáctanos</h2>
-              <p>
-                Completa el formulario para enviar un mensaje al equipo. Los
-                datos se validan con JavaScript y se guardan en localStorage.
-              </p>
-            </div>
-
-            <form id="form-contacto" novalidate>
-              <div class="form-group">
-                <label for="nombre">Nombre completo</label>
-                <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  placeholder="Tu nombre"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="correo@ejemplo.com"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="mensaje">Mensaje</label>
-                <textarea
-                  id="mensaje"
-                  name="mensaje"
-                  rows="4"
-                  placeholder="Escribe tu mensaje..."
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn-enviar">Enviar</button>
-
-              <p id="msg-respuesta" aria-live="polite"></p>
-            </form>
-
-            <div class="storage-actions">
-              <button
-                id="btn-ver-mensajes"
-                class="btn-secundario"
-                type="button"
-              >
-                Ver mensajes enviados
-              </button>
-
-              <div id="mensajes-guardados" aria-live="polite"></div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div class="container footer-content">
+        <article class="member-card reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <h3>Said Castillo Aguilar</h3>
+          <p class="role">Programador JavaScript</p>
           <p>
-            © <span id="currentYear"></span> · Clase de Git y GitFlow -
-            Desarrollo Web Integral
+            Agrega las interacciones sencillas: cambio de tema, animaciones al
+            desplazarse y actualización automática del año.
           </p>
-          <a href="#inicio">Volver arriba ↑</a>
-        </div>
-      </footer>
+          <span class="branch">feature/interacciones-js</span>
+        </article>
 
-      <script src="app.js"></script>
-    </body>
-  </body>
+        <article class="member-card reveal">
+          <div class="avatar" aria-hidden="true"></div>
+          <h3>Jose Samuel Quezada Simon</h3>
+          <p class="role">Diseñador UI / CSS</p>
+          <p>
+            Define colores, tipografías, espaciados, tarjetas, diseño adaptable y
+            apariencia visual general de la landing page.
+          </p>
+          <span class="branch">feature/diseno-css</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© <span id="currentYear"></span> · Clase de Git y GitFlow - Desarrollo Web Integral</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</body>
 </html>

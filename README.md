@@ -1,14 +1,45 @@
-# Inicio del proyecto
+````md
+# Equipo 8 - Práctica GitFlow
 
-## Líder
+Proyecto realizado para la materia **Desarrollo Web Integral**.
 
-- *Salomon Larios Nazar*
+## Integrantes
 
-## Programadores
+- Salomon Larios Nazar - Líder
+- Mauricio Martínez Trejo - Programador HTML
+- Said Castillo Aguilar - Programador JavaScript
+- José Samuel Quezada Simón - Diseñador CSS
 
-- *Mauricio Martinez Trejo*
-- *Said Castillo Aguilar*
+## Tecnologías utilizadas
 
-## Diseñador
+- HTML
+- CSS
+- JavaScript
+- Git
+- GitHub
 
-- *José Samuel Quezada Simón*
+## Clonar el repositorio con SSH
+
+Para clonar el proyecto se debe usar la URL SSH del repositorio:
+
+```bash
+git clone git@github.com:LaNazSalomon/practica-1-gitflow.git
+````
+
+Después entra a la carpeta del proyecto:
+
+```bash
+cd practica-1-gitflow
+```
+
+## Ejecutar el proyecto
+
+Abrir el archivo `index.html` en el navegador.
+
+## Descripción
+
+Landing page colaborativa creada como práctica de GitFlow, usando ramas, Pull Requests, commits descriptivos y resolución de conflictos.
+
+```
+```
+

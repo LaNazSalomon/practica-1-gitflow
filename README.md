@@ -1,4 +1,3 @@
-````md
 # Equipo 8 - Práctica GitFlow
 
 Proyecto realizado para la materia **Desarrollo Web Integral**.
@@ -39,7 +38,4 @@ Abrir el archivo `index.html` en el navegador.
 ## Descripción
 
 Landing page colaborativa creada como práctica de GitFlow, usando ramas, Pull Requests, commits descriptivos y resolución de conflictos.
-
-```
-```
 

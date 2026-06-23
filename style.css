@@ -1,21 +1,28 @@
 /* =========================================
-   VARIABLES Y CONFIGURACIÓN GENERAL
+   VARIABLES CSS GLOBALES
 ========================================= */
 
 :root {
-    --primary: #1f4e68;
-    --primary-light: #327a9f;
-    --accent: #59c3e2;
+    --color-primario: #1f3864;
+    --color-acento: #2e75b6;
+    --color-fondo: #f2f4f8;
+    --color-texto: #333333;
+    --fuente-base: 'Segoe UI', sans-serif;
+    --radio-borde: 8px;
+    --sombra: 0 4px 12px rgba(0,0,0,0.1);
 
-    --background: #f4f7f9;
-    --surface: #ffffff;
-    --text: #263238;
-    --text-secondary: #64727a;
-
-    --footer: #17384b;
-    --border: #d9e2e7;
-    --shadow: rgba(20, 45, 60, 0.15);
+    --color-blanco: #ffffff;
+    --color-footer: #17384b;
+    --color-borde: #d8dee8;
+    --color-texto-secundario: #5f6f7a;
+    --color-error: #c0392b;
+    --color-exito: #1e8449;
 }
+
+
+/* =========================================
+   RESETEO GENERAL
+========================================= */
 
 * {
     margin: 0;
@@ -29,12 +36,9 @@ html {
 
 body {
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-    background-color: var(--background);
-    transition:
-        color 0.3s ease,
-        background-color 0.3s ease;
+    font-family: var(--fuente-base);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
 }
 
 a {
@@ -42,8 +46,9 @@ a {
 }
 
 button,
-a {
-    -webkit-tap-highlight-color: transparent;
+input,
+textarea {
+    font-family: inherit;
 }
 
 .container {
@@ -53,38 +58,33 @@ a {
 
 
 /* =========================================
-   ENCABEZADO
+   HERO / ENCABEZADO
 ========================================= */
 
 .hero {
     min-height: 520px;
-    color: #ffffff;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(20, 54, 73, 0.97),
-            rgba(42, 112, 147, 0.94)
-        );
-    border-bottom: 5px solid var(--accent);
+    color: var(--color-blanco);
+    background: linear-gradient(
+        135deg,
+        #16384f,
+        var(--color-primario),
+        var(--color-acento)
+    );
+    border-bottom: 5px solid #59c3e2;
 }
-
-
-/* =========================================
-   BARRA DE NAVEGACIÓN
-========================================= */
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 75px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .brand {
-    color: #ffffff;
     font-size: 1.3rem;
     font-weight: 800;
+    color: var(--color-blanco);
     text-decoration: none;
 }
 
@@ -109,12 +109,12 @@ a {
     bottom: -6px;
     width: 0;
     height: 2px;
-    background-color: var(--accent);
+    background-color: #59c3e2;
     transition: width 0.25s ease;
 }
 
 .nav-actions a:hover {
-    color: #ffffff;
+    color: var(--color-blanco);
 }
 
 .nav-actions a:hover::after {
@@ -123,7 +123,7 @@ a {
 
 
 /* =========================================
-   BOTÓN DE TEMA
+   BOTÓN CAMBIO DE TEMA
 ========================================= */
 
 .theme-button {
@@ -133,13 +133,11 @@ a {
     height: 43px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.13);
+    color: var(--color-blanco);
+    background-color: rgba(255, 255, 255, 0.14);
     font-size: 1.2rem;
     cursor: pointer;
-    transition:
-        transform 0.25s ease,
-        background-color 0.25s ease;
+    transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .theme-button:hover {
@@ -147,14 +145,9 @@ a {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-.theme-button:focus-visible {
-    outline: 3px solid #ffffff;
-    outline-offset: 3px;
-}
-
 
 /* =========================================
-   CONTENIDO PRINCIPAL DEL HERO
+   CONTENIDO DEL HERO
 ========================================= */
 
 .hero-content {
@@ -172,7 +165,7 @@ a {
     padding: 8px 15px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 30px;
-    color: #ffffff;
+    color: var(--color-blanco);
     background-color: rgba(255, 255, 255, 0.13);
     font-size: 0.85rem;
     font-weight: 700;
@@ -199,28 +192,23 @@ a {
 .primary-button {
     display: inline-block;
     padding: 14px 24px;
-    border: 2px solid var(--accent);
-    border-radius: 9px;
-    color: #17384b;
-    background-color: var(--accent);
+    border-radius: var(--radio-borde);
+    color: var(--color-primario);
+    background-color: #59c3e2;
     font-weight: 800;
     text-decoration: none;
     box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background-color 0.25s ease;
+    transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .primary-button:hover {
     transform: translateY(-3px);
     background-color: #7bd4ed;
-    box-shadow: 0 11px 24px rgba(0, 0, 0, 0.25);
 }
 
 
 /* =========================================
-   SECCIÓN DEL EQUIPO
+   SECCIONES GENERALES
 ========================================= */
 
 .section {
@@ -236,7 +224,7 @@ a {
 .eyebrow {
     display: block;
     margin-bottom: 10px;
-    color: var(--primary-light);
+    color: var(--color-acento);
     font-size: 0.85rem;
     font-weight: 800;
     letter-spacing: 2px;
@@ -246,21 +234,22 @@ a {
 .section-heading h2 {
     margin-bottom: 18px;
     font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-primario);
 }
 
 .section-heading p {
-    color: var(--text-secondary);
+    color: var(--color-texto-secundario);
     font-size: 1rem;
     line-height: 1.75;
 }
 
 .section-heading strong {
-    color: var(--primary-light);
+    color: var(--color-acento);
 }
 
 
 /* =========================================
-   CUADRÍCULA DE TARJETAS
+   TARJETAS DEL EQUIPO
 ========================================= */
 
 .team-grid {
@@ -269,33 +258,35 @@ a {
     gap: 26px;
 }
 
-
-/* =========================================
-   TARJETAS GENERALES
-========================================= */
-
 .member-card {
     --card-color: #2980b9;
-    --card-soft-color: #eaf6fd;
+    --card-bg: #e7f4fc;
 
     position: relative;
     overflow: hidden;
     min-height: 380px;
     padding: 32px 28px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--color-borde);
     border-top: 7px solid var(--card-color);
     border-radius: 16px;
-    background:
-        linear-gradient(
-            145deg,
-            var(--surface) 55%,
-            var(--card-soft-color)
-        );
-    box-shadow: 0 8px 24px var(--shadow);
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background-color 0.3s ease;
+    background: linear-gradient(145deg, var(--color-blanco) 55%, var(--card-bg));
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:nth-child(1) {
+    --card-color: #2980b9;
+    --card-bg: #e7f4fc;
+}
+
+.member-card:nth-child(2) {
+    --card-color: #e67e22;
+    --card-bg: #fdf0e3;
+}
+
+.member-card:nth-child(3) {
+    --card-color: #8e44ad;
+    --card-bg: #f4eafb;
 }
 
 .member-card::after {
@@ -315,47 +306,6 @@ a {
     box-shadow: 0 17px 35px rgba(20, 45, 60, 0.22);
 }
 
-.member-card h3 {
-    margin-bottom: 10px;
-    color: var(--text);
-    font-size: 1.35rem;
-    line-height: 1.35;
-}
-
-.member-card > p:not(.role) {
-    margin-bottom: 22px;
-    color: var(--text-secondary);
-    line-height: 1.65;
-}
-
-
-/* =========================================
-   COLOR DE CADA INTEGRANTE
-========================================= */
-
-/* Mauricio: azul */
-.member-card:nth-child(1) {
-    --card-color: #2980b9;
-    --card-soft-color: #e7f4fc;
-}
-
-/* Said: naranja */
-.member-card:nth-child(2) {
-    --card-color: #e67e22;
-    --card-soft-color: #fdf0e3;
-}
-
-/* José Samuel: morado */
-.member-card:nth-child(3) {
-    --card-color: #8e44ad;
-    --card-soft-color: #f4eafb;
-}
-
-
-/* =========================================
-   AVATARES
-========================================= */
-
 .avatar {
     display: grid;
     place-items: center;
@@ -364,8 +314,7 @@ a {
     margin-bottom: 24px;
     border: 3px solid var(--card-color);
     border-radius: 50%;
-    background-color: var(--card-soft-color);
-    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+    background-color: var(--card-bg);
 }
 
 .avatar::before {
@@ -375,14 +324,21 @@ a {
     font-weight: 900;
 }
 
+.member-card h3 {
+    margin-bottom: 10px;
+    color: var(--color-texto);
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
 
-/* =========================================
-   ROL Y RAMA
-========================================= */
+.member-card p {
+    color: var(--color-texto-secundario);
+    line-height: 1.65;
+}
 
 .role {
     margin-bottom: 18px;
-    color: var(--card-color);
+    color: var(--card-color) !important;
     font-size: 0.88rem;
     font-weight: 800;
     letter-spacing: 0.6px;
@@ -394,11 +350,12 @@ a {
     z-index: 1;
     display: inline-block;
     max-width: 100%;
+    margin-top: 22px;
     padding: 8px 12px;
-    border: 1px solid color-mix(in srgb, var(--card-color) 35%, transparent);
-    border-radius: 7px;
+    border: 1px solid var(--card-color);
+    border-radius: var(--radio-borde);
     color: var(--card-color);
-    background-color: var(--card-soft-color);
+    background-color: var(--card-bg);
     font-family: Consolas, "Courier New", monospace;
     font-size: 0.8rem;
     font-weight: 700;
@@ -407,15 +364,225 @@ a {
 
 
 /* =========================================
-   ANIMACIÓN CONTROLADA POR JAVASCRIPT
+   SECCIÓN PORTAFOLIO
+========================================= */
+
+#portafolio {
+    background-color: var(--color-blanco);
+}
+
+.portafolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.proyecto-card {
+    overflow: hidden;
+    border-radius: var(--radio-borde);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra);
+    border: 1px solid var(--color-borde);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.proyecto-card figure {
+    margin: 0;
+}
+
+.proyecto-card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background-color: #dce6ee;
+}
+
+.proyecto-card figcaption {
+    padding: 10px 16px;
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.proyecto-card h3 {
+    padding: 20px 20px 8px;
+    color: var(--color-primario);
+    font-size: 1.25rem;
+}
+
+.proyecto-card p {
+    padding: 0 20px;
+    color: var(--color-texto-secundario);
+    line-height: 1.6;
+}
+
+.btn-ver {
+    display: inline-block;
+    margin: 20px;
+    padding: 11px 18px;
+    border-radius: var(--radio-borde);
+    color: var(--color-blanco);
+    background-color: var(--color-acento);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-ver:hover {
+    background-color: var(--color-primario);
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   SECCIÓN CONTACTO
+========================================= */
+
+.contacto-section {
+    background-color: #eaf0f5;
+}
+
+#form-contacto {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: var(--radio-borde);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+#form-contacto label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-primario);
+    font-weight: 700;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #ccc;
+    border-radius: var(--radio-borde);
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.18);
+}
+
+.btn-enviar,
+.btn-secundario {
+    border-radius: var(--radio-borde);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-enviar {
+    padding: 12px 22px;
+    border: none;
+    color: var(--color-blanco);
+    background-color: var(--color-acento);
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-primario);
+    transform: scale(1.05);
+}
+
+#msg-respuesta {
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.msg-error {
+    color: var(--color-error);
+}
+
+.msg-exito {
+    color: var(--color-exito);
+}
+
+
+/* =========================================
+   BONUS: MENSAJES GUARDADOS
+========================================= */
+
+.storage-actions {
+    max-width: 720px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+.btn-secundario {
+    padding: 11px 18px;
+    border: 2px solid var(--color-acento);
+    color: var(--color-primario);
+    background-color: transparent;
+}
+
+.btn-secundario:hover {
+    color: var(--color-blanco);
+    background-color: var(--color-acento);
+    transform: scale(1.03);
+}
+
+#mensajes-guardados {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.mensaje-card {
+    margin-bottom: 14px;
+    padding: 16px;
+    border-left: 5px solid var(--color-acento);
+    border-radius: var(--radio-borde);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra);
+}
+
+.mensaje-card h4 {
+    margin-bottom: 6px;
+    color: var(--color-primario);
+}
+
+.mensaje-card p {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.mensaje-card small {
+    color: var(--color-texto-secundario);
+}
+
+
+/* =========================================
+   ANIMACIÓN CON JAVASCRIPT
 ========================================= */
 
 .reveal {
     opacity: 0;
     transform: translateY(35px);
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal.visible {
@@ -423,24 +590,16 @@ a {
     transform: translateY(0);
 }
 
-.member-card:nth-child(2) {
-    transition-delay: 0.12s;
-}
-
-.member-card:nth-child(3) {
-    transition-delay: 0.24s;
-}
-
 
 /* =========================================
-   PIE DE PÁGINA
+   FOOTER
 ========================================= */
 
 footer {
     padding: 25px 0;
     color: #e5f1f6;
-    background-color: var(--footer);
-    border-top: 4px solid var(--accent);
+    background-color: var(--color-footer);
+    border-top: 4px solid #59c3e2;
 }
 
 .footer-content {
@@ -456,14 +615,14 @@ footer {
 }
 
 .footer-content a {
-    color: var(--accent);
+    color: #59c3e2;
     font-size: 0.9rem;
     font-weight: 700;
     text-decoration: none;
 }
 
 .footer-content a:hover {
-    color: #ffffff;
+    color: var(--color-blanco);
 }
 
 
@@ -472,107 +631,71 @@ footer {
 ========================================= */
 
 body.dark-theme {
-    --background: #101820;
-    --surface: #1a2730;
-    --text: #edf4f7;
-    --text-secondary: #b6c5cc;
-    --border: #30434d;
-    --shadow: rgba(0, 0, 0, 0.4);
+    --color-fondo: #101820;
+    --color-texto: #edf4f7;
+    --color-blanco: #1a2730;
+    --color-borde: #30434d;
+    --color-texto-secundario: #b6c5cc;
 
-    color: var(--text);
-    background-color: var(--background);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 body.dark-theme .hero {
-    background:
-        linear-gradient(
-            135deg,
-            #122a38,
-            #1f526a
-        );
+    background: linear-gradient(135deg, #0d1c26, #16384f, #1f5f7e);
 }
 
-body.dark-theme .member-card {
-    background:
-        linear-gradient(
-            145deg,
-            var(--surface) 65%,
-            color-mix(in srgb, var(--card-color) 18%, var(--surface))
-        );
+body.dark-theme .section-heading h2,
+body.dark-theme .member-card h3,
+body.dark-theme .proyecto-card h3 {
+    color: #edf4f7;
+}
+
+body.dark-theme #portafolio {
+    background-color: #101820;
+}
+
+body.dark-theme .member-card,
+body.dark-theme .proyecto-card,
+body.dark-theme #form-contacto,
+body.dark-theme .mensaje-card {
+    background: #1a2730;
+}
+
+body.dark-theme .contacto-section {
+    background-color: #121d27;
+}
+
+body.dark-theme #form-contacto input,
+body.dark-theme #form-contacto textarea {
+    color: #edf4f7;
+    background-color: #101820;
+    border-color: #30434d;
 }
 
 body.dark-theme .branch {
-    background-color:
-        color-mix(in srgb, var(--card-color) 15%, var(--surface));
+    background-color: #101820;
 }
 
 
 /* =========================================
-   DISEÑO RESPONSIVO
+   MEDIA QUERIES RESPONSIVAS
 ========================================= */
 
-@media (max-width: 900px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* Tablet — máx. 768px */
+@media (max-width: 768px) {
+    .team-grid,
+    .team-cards {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .member-card:nth-child(3) {
-        grid-column: 1 / -1;
-        width: calc(50% - 13px);
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 650px) {
-    .navbar {
-        min-height: auto;
-        padding: 18px 0;
+    .portafolio-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .brand {
-        font-size: 1.1rem;
-    }
-
-    .nav-actions {
-        gap: 12px;
-    }
-
-    .nav-actions a {
-        display: none;
-    }
-
-    .hero {
-        min-height: auto;
-    }
-
-    .hero-content {
-        min-height: 430px;
-        align-items: center;
-        padding: 55px 0 70px;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 2.6rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .member-card,
-    .member-card:nth-child(3) {
-        grid-column: auto;
-        width: 100%;
-        min-height: auto;
+    .proyecto-card {
+        display: flex;
+        flex-direction: column;
     }
 
     .footer-content {
@@ -582,24 +705,46 @@ body.dark-theme .branch {
 }
 
 
-/* =========================================
-   USUARIOS QUE PREFIEREN MENOS ANIMACIONES
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
+/* Móvil — máx. 480px */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+        padding: 18px 0;
     }
 
-    *,
-    *::before,
-    *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
+    .nav-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
-    .reveal {
-        opacity: 1;
-        transform: none;
+    .hero-content {
+        align-items: center;
+        min-height: 420px;
+        text-align: center;
+    }
+
+    header h1,
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .team-grid,
+    .team-cards,
+    .portafolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    #form-contacto {
+        padding: 22px;
+    }
+
+    .proyecto-card img {
+        height: 160px;
     }
 }

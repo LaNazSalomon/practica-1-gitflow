@@ -6,7 +6,7 @@
 
 ## Programadores
 
-- *Mauricio Martínez Trejo*
+- *Mauricio Martinez Trejo*
 - *Said Castillo Aguilar*
 
 ## Diseñador
